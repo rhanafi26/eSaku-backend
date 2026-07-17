@@ -9,7 +9,8 @@
     "seed": "node prisma/seed.js",
     "start": "node src/index.js",
     "migrate": "npx prisma migrate dev --name init",
-    "migrate:prod": "npx prisma migrate deploy"
+    "migrate:prod": "node_modules/.bin/prisma migrate deploy",
+    "postinstall": "node_modules/.bin/prisma generate"
   },
   "keywords": [],
   "author": "",
